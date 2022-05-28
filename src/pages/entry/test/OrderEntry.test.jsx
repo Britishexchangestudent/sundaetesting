@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen } from "../../../test-urils/testing-library-utils";
 import { rest } from "msw";
 import OrderEntry from "../OrderEntry";
 import { server } from "../../../mocks/server";
