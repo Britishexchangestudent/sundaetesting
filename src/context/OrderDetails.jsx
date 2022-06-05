@@ -66,9 +66,16 @@ export function OrderDetailsProvider(props) {
       setOptionCounts(newOptionCount);
     }
 
+    function resetOrder() {
+      setOptionCounts({
+        scoops: new Map(),
+        toppings: new Map(),
+      });
+    }
+
     // getter: object containing option counts for scoops and toppings, subtotal and totals
     // setter: updateOptionCount
-    return [{ ...optionCounts, total }, updateItemCount];
+    return [{ ...optionCounts, total }, updateItemCount, resetOrder];
   }, [optionCounts, total]);
 
   return (

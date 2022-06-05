@@ -10,9 +10,6 @@ test("initial conditions", () => {
       <App />
     </RecoilRoot>
   );
-  const checkbox = screen.getByTestId("my-checkbox");
-  expect(checkbox).not.toBeChecked();
-
-  const button = screen.getByRole("button", { name: "Confirm" });
-  expect(button).toBeDisabled();
+  const checkbox = screen.getByRole("heading", { name: "Scoops" });
+  expect(checkbox).toBeInTheDocument();
 });
